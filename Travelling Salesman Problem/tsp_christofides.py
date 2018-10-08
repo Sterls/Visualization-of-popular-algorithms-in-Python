@@ -90,7 +90,7 @@ def christofedes(G ,pos):
 			odd_vert.append(i) #if the degree of the vertex is odd, then append it to odd_vert list
 	minimumWeightedMatching(MST, G, odd_vert) #adds minimum weight matching edges to MST
 	# now MST has the Eulerian circuit
-	start = MST.nodes()[0]
+	start = list(MST.nodes())[0]
 	visited = [False] * len(MST.nodes())
 	# finds the hamiltonian circuit
 	curr = start
